@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.sebastien.listassignment.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:id="@+id/Title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="TO DO-LIST APP"
+        android:textSize="42dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Add the item you need to do here"
+        android:onClick="removeText"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/entry"
+        android:gravity="center"/>
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:padding = "15dp"
+        android:id="@+id/addButton"
+        android:gravity="center"
+        android:onClick="addEntry"
+        android:layout_alignTop="@+id/entry"
+        android:layout_alignRight="@+id/myList"
+        android:layout_alignEnd="@+id/myList" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myList"
+        android:layout_alignLeft="@+id/Title"
+        android:layout_alignStart="@+id/Title"
+        android:layout_below="@+id/Title"
+        android:layout_above="@+id/addButton"
+        android:layout_alignRight="@+id/Title"
+        android:layout_alignEnd="@+id/Title"
+        />
+
+
+
+</RelativeLayout>
